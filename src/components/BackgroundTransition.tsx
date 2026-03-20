@@ -49,6 +49,22 @@ export function BackgroundTransition() {
       h.style.color = hexToRgba(sectionThemes.hero.text, alpha);
     });
 
+    // Query icon containers that need bg/border color transitions
+    const iconBgEls =
+      document.querySelectorAll<HTMLElement>("[data-section-bg]");
+    const iconBorderEls =
+      document.querySelectorAll<HTMLElement>("[data-section-border]");
+
+    // Set initial icon colors to match hero theme
+    iconBgEls.forEach((el) => {
+      const alpha = parseFloat(el.dataset.sectionBg || "0.2");
+      el.style.backgroundColor = hexToRgba(sectionThemes.hero.text, alpha);
+    });
+    iconBorderEls.forEach((el) => {
+      const alpha = parseFloat(el.dataset.sectionBorder || "0.3");
+      el.style.borderColor = hexToRgba(sectionThemes.hero.text, alpha);
+    });
+
     // Animate background + all headings to a given theme
     const animateToTheme = (theme: SectionTheme) => {
       gsap.to(bg, {
@@ -61,6 +77,24 @@ export function BackgroundTransition() {
         const alpha = parseFloat(h.dataset.headingAlpha || "1");
         gsap.to(h, {
           color: hexToRgba(theme.text, alpha),
+          duration: 0.6,
+          ease: "power2.inOut",
+        });
+      });
+
+      iconBgEls.forEach((el) => {
+        const alpha = parseFloat(el.dataset.sectionBg || "0.2");
+        gsap.to(el, {
+          backgroundColor: hexToRgba(theme.text, alpha),
+          duration: 0.6,
+          ease: "power2.inOut",
+        });
+      });
+
+      iconBorderEls.forEach((el) => {
+        const alpha = parseFloat(el.dataset.sectionBorder || "0.3");
+        gsap.to(el, {
+          borderColor: hexToRgba(theme.text, alpha),
           duration: 0.6,
           ease: "power2.inOut",
         });

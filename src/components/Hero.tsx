@@ -200,16 +200,16 @@ export function Hero() {
       <div className="relative z-10 text-center w-full px-4 -mb-2 md:-mb-4">
         {/* Icons — above text on mobile, beside text on desktop */}
         <div className="flex justify-center gap-4 mb-8 md:hidden">
-          <div className="hero-icon hero-icon-1 w-28 h-20 rounded-[20px] bg-accent/20 flex items-center justify-center cursor-pointer">
-            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" className="hero-svg-1 text-hero">
+          <div data-section-bg="0.2" className="hero-icon hero-icon-1 w-28 h-20 rounded-[20px] flex items-center justify-center cursor-pointer">
+            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" data-section-heading data-heading-alpha="1" className="hero-svg-1">
               <circle cx="42" cy="14" r="5" fill="currentColor" />
               <path d="M30 52L36 36L28 28L20 32L16 48" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               <path d="M28 28L40 22L56 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M36 36L44 42L48 54" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <div className="hero-icon hero-icon-2 w-28 h-20 rounded-[20px] border-2 border-accent/30 flex items-center justify-center cursor-pointer">
-            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" className="hero-svg-2 text-hero/40">
+          <div data-section-border="0.3" className="hero-icon hero-icon-2 w-28 h-20 rounded-[20px] border-2 flex items-center justify-center cursor-pointer">
+            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" data-section-heading data-heading-alpha="0.4" className="hero-svg-2">
               <circle cx="22" cy="14" r="5" stroke="currentColor" strokeWidth="2" />
               <path d="M34 52L28 36L36 28L44 32L48 48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M36 28L24 22L8 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -221,8 +221,8 @@ export function Hero() {
         {/* DIGITAL line with icons on both sides — desktop only */}
         <div className="hero-line-1 relative">
           {/* Icon 1 — left of DIGITAL (desktop only) */}
-          <div className="hero-icon hero-icon-1 hidden md:flex absolute left-[12%] top-1/2 -translate-y-1/2 z-20 w-48 h-28 rounded-[28px] bg-accent/20 items-center justify-center cursor-pointer">
-            <svg width="56" height="56" viewBox="0 0 64 64" fill="none" className="hero-svg-1 text-hero">
+          <div data-section-bg="0.2" className="hero-icon hero-icon-1 hidden md:flex absolute left-[12%] top-1/2 -translate-y-1/2 z-20 w-48 h-28 rounded-[28px] items-center justify-center cursor-pointer">
+            <svg width="56" height="56" viewBox="0 0 64 64" fill="none" data-section-heading data-heading-alpha="1" className="hero-svg-1">
               <circle cx="42" cy="14" r="5" fill="currentColor" />
               <path d="M30 52L36 36L28 28L20 32L16 48" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               <path d="M28 28L40 22L56 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
@@ -231,8 +231,8 @@ export function Hero() {
           </div>
 
           {/* Icon 2 — right of DIGITAL (desktop only) */}
-          <div className="hero-icon hero-icon-2 hidden md:flex absolute right-[12%] top-1/2 -translate-y-1/2 z-20 w-48 h-28 rounded-[28px] border-2 border-accent/30 items-center justify-center cursor-pointer">
-            <svg width="56" height="56" viewBox="0 0 64 64" fill="none" className="hero-svg-2 text-hero/40">
+          <div data-section-border="0.3" className="hero-icon hero-icon-2 hidden md:flex absolute right-[12%] top-1/2 -translate-y-1/2 z-20 w-48 h-28 rounded-[28px] border-2 items-center justify-center cursor-pointer">
+            <svg width="56" height="56" viewBox="0 0 64 64" fill="none" data-section-heading data-heading-alpha="0.4" className="hero-svg-2">
               <circle cx="22" cy="14" r="5" stroke="currentColor" strokeWidth="2" />
               <path d="M34 52L28 36L36 28L44 32L48 48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M36 28L24 22L8 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
