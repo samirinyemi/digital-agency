@@ -3,7 +3,7 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AXIOM Studio | Digital Design Agency",
+  title: "AXIOM STUDIO | SONI LABS",
   description: "We craft digital experiences that define brands and move people.",
 };
 
