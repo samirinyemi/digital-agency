@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
+/* Druk Cond Super - commercial font, load from local files if available */
+@font-face {
+  font-family: "Druk Cond Super";
+  src: url("/fonts/DrukCond-Super.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Cond Super";
+  src: url("/fonts/DrukCond-SuperItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Bold";
+  src: url("/fonts/Druk-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Bold";
+  src: url("/fonts/Druk-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Heavy";
+  src: url("/fonts/Druk-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Heavy";
+  src: url("/fonts/Druk-HeavyItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/AeonikTRIAL-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark purple hero palette */
+  --background: #1a0a1f;
+  --foreground: #e8b4f8;
+  --accent: #d466ff;
+  --accent-hover: #c040f0;
+  --muted: #8b5e9a;
+  --border: rgba(212, 102, 255, 0.15);
+  --surface: #220e2a;
+  --bright: #f0d0ff;
+  --hero: #c77dff;
+  --hero-muted: rgba(199, 125, 255, 0.3);
+
+  /* Dark teal + cyan palette */
+  --teal: #0a2a2e;
+  --cyan: #7dffd2;
+  --teal-surface: #0e3a3e;
+  --teal-muted: #3a7a7e;
+
+  /* White section palette */
+  --white-bg: #ffffff;
+  --black-text: #0a0a0a;
+  --gray-muted: #6b6b6b;
+  --light-gray: #f5f5f5;
+
+  /* Sticker accent colors */
+  --sticker-purple: #9b5de5;
+  --sticker-orange: #f77f00;
+  --sticker-pink: #f15bb5;
+  --sticker-green: #00f5d4;
+
+  /* Druk font family */
+  --font-druk: "Druk Cond Super", "Impact", "Haettenschweiler",
+    "Arial Narrow Bold", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-bright: var(--bright);
+  --color-hero: var(--hero);
+  --color-hero-muted: var(--hero-muted);
+  --color-teal: var(--teal);
+  --color-cyan: var(--cyan);
+  --color-teal-surface: var(--teal-surface);
+  --color-teal-muted: var(--teal-muted);
+  --color-white-bg: var(--white-bg);
+  --color-black-text: var(--black-text);
+  --color-gray-muted: var(--gray-muted);
+  --color-light-gray: var(--light-gray);
+  --color-sticker-purple: var(--sticker-purple);
+  --color-sticker-orange: var(--sticker-orange);
+  --color-sticker-pink: var(--sticker-pink);
+  --color-sticker-green: var(--sticker-green);
+  --font-sans: "Aeonik", system-ui, sans-serif;
+  --font-druk: var(--font-druk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Aeonik", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(212, 102, 255, 0.3);
+  color: #f0d0ff;
+}
+
+.gsap-hidden {
+  visibility: hidden;
+}
+
+.font-druk {
+  font-family: var(--font-druk);
+}
+
+.font-druk-bold {
+  font-family: "Druk Bold", "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+}
+
+.font-druk-heavy {
+  font-family: "Druk Heavy", "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
 }
