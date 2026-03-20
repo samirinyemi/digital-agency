@@ -141,18 +141,7 @@ export function Values() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 )}
-                {value.video && (
-                  <video
-                    src={value.video}
-                    playsInline
-                    muted
-                    loop
-                    autoPlay
-                    preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                )}
-                {!value.cover && !value.video && (
+                {!value.cover && (
                   <span
                     data-section-heading
                     data-heading-alpha="0.15"
