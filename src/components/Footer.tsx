@@ -61,12 +61,12 @@ export function Footer() {
           LET&apos;S TALK.
         </h2>
         <a
-          href="mailto:hello@axiom.studio"
+          href="mailto:hello@madebysoni.com"
           data-section-heading
           data-heading-alpha="0.5"
           className="cta-email inline-block mt-8 text-lg md:text-xl transition-colors duration-300 underline underline-offset-4"
         >
-          hello@axiom.studio
+          hello@madebysoni.com
         </a>
       </section>
 

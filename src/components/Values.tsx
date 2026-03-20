@@ -103,7 +103,7 @@ export function Values() {
   );
 
   return (
-    <section ref={container} id="values" className="py-32 px-6 md:px-16">
+    <section ref={container} id="values" className="py-12 md:py-32 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <div className="values-heading">

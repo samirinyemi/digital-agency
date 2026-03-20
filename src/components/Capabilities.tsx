@@ -39,7 +39,8 @@ export function Capabilities() {
       // Each word slides in from alternating left/right as section scrolls through
       words.forEach((word, i) => {
         const fromRight = i % 2 === 0;
-        const xVal = fromRight ? 120 : -120;
+        const isMobile = window.innerWidth < 768;
+        const xVal = fromRight ? (isMobile ? 60 : 120) : (isMobile ? -60 : -120);
 
         gsap.fromTo(
           word,
@@ -62,7 +63,7 @@ export function Capabilities() {
   );
 
   return (
-    <section ref={container} id="capabilities" className="py-32 md:py-48 px-6 md:px-12 overflow-hidden">
+    <section ref={container} id="capabilities" className="py-8 md:py-48 px-6 md:px-12 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Micro label */}
         <span data-section-heading data-heading-alpha="0.4" className="cap-label block text-[10px] font-semibold uppercase tracking-[0.3em] text-center mb-8">
@@ -77,7 +78,7 @@ export function Capabilities() {
               className="cap-word justify-center"
               style={{ opacity: 0 }}
             >
-              <span data-section-heading className="text-[clamp(3.5rem,13vw,11rem)] font-druk-bold uppercase italic leading-[0.92] tracking-[-0.02em] whitespace-nowrap">
+              <span data-section-heading className="text-[clamp(4.5rem,17vw,11rem)] font-druk-bold uppercase italic leading-[0.92] tracking-[-0.02em] whitespace-nowrap">
                 {line}
               </span>
             </div>
