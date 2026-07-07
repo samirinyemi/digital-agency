@@ -86,7 +86,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     // For coverFrame: "last", seek to end once metadata loads
     if (project.coverFrame === "last") {
       const seekToEnd = () => {
-        video.currentTime = video.duration;
+        if (Number.isFinite(video.duration)) {
+          video.currentTime = video.duration;
+        }
       };
       video.addEventListener("loadedmetadata", seekToEnd, { once: true });
     }
@@ -112,7 +114,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     if (!video) return;
     video.pause();
     // Seek back to last frame or first frame depending on coverFrame
-    if (project.coverFrame === "last") {
+    if (project.coverFrame === "last" && Number.isFinite(video.duration)) {
       video.currentTime = video.duration;
     } else {
       video.currentTime = 0;
